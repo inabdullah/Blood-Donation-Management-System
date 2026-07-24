@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Create Donor";
+}
+
+<h2>Create Donor</h2>
+
+<form method="post">
+    Name:
+    <input type="text" name="FullName" class="form-control" placeholder="Full Name" /> <br />
+
+    Blood Group:
+    <input type="text" name="BloodGroup" class="form-control" placeholder="Blood Group" /> <br />
+
+    Contact No:
+    <input type="text" name="ContactNo" class="form-control" placeholder="Contact No" /> <br />
+
+    City:<br />
+    <input type="text" name="City" class="form-control" placeholder="City" /> <br />
+
+    Last Donation Date:
+    <input type="date" name="LastDonationDate" class="form-control" /> <br />
+
+    <input type="submit" value="Create" class="btn btn-primary"/> <br />
+
+    <a href="/Donor/Index">Back</a>
+</form>

@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@model List<Blood_Donation_Management_System.EF.Tables.Donor>
+
+@{
+    ViewData["Title"] = "Donor List";
+}
+
+<h2>Donor List</h2>
+
+<p>
+    <a href="/Donor/Create" class="btn btn-primary">Create New Donor</a>
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Blood Group</th>
+        <th>Contact No</th>
+        <th>City</th>
+        <th>Last Donation Date</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var donor in Model)
+    {
+        <tr>
+            <td>@donor.DonorId</td>
+            <td>@donor.FullName</td>
+            <td>@donor.BloodGroup</td>
+            <td>@donor.ContactNo</td>
+            <td>@donor.City</td>
+            <td>@donor.LastDonationDate</td>
+            <td>
+                <a href="/Donor/Details/@donor.DonorId">Details</a> |
+                <a href="/Donor/Edit/@donor.DonorId">Edit</a> |
+                <a href="/Donor/Delete/@donor.DonorId">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
